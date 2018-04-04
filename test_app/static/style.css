@@ -1,0 +1,25 @@
+.form_container {
+  border: black;
+  background: grey;
+  margin: 20%;
+  padding: 50px;
+  text-align: center;
+}
+
+.response_container {
+  text-align: left;
+}
+
+#red_error {
+  color: red;
+}
+
+
+#css_test {
+  color: blue;
+}
+
+
+#header {
+  color: red;
+}
