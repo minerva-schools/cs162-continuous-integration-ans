@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class = 'form_container'>
+  {% if error %}
+  <h2 id = 'red_error'> <strong> Error: </strong> {{error}} </h2>
+  {% endif %}
+  <form method="post">
+    <label for="comment_input"></label>
+    <h3> Type in what your heart desires </h3>
+    <input type = 'text' name = 'comment_input'> </input>
+    <button type = 'submit'>Submit </button>
+  </form>
+  <div class = response_container>
+    <ul>
+      {% for comment_in in comm_range %}
+      <li> <strong> {{comments[comment_in].text}} </strong>
+        <ul>
+          <li>
+            {{responses[comment_in].text}}
+          </li>
+        </ul>
+      </li>
+      <br>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<h1 id = css_test> TEST <h1>
+{% endblock %}
